@@ -1,0 +1,37 @@
+= Look, AsciiDoctor examples
+
+Ken Rimple, March 2021
+
+I've been through it all: using PowerPoint and Keynote, writing books in DocBook, attempts to get Pandoc and Markdown to write nice books and slides with LaTeX and Beamer, writing slides with HTML 5 and Reveal.js by hand, and then eventually I stumbled on Asciidoc and the Asciidoctor tool set. 
+
+Things I'm using in this barebones and silly set of tool examples:
+
+* The Asciidoctor Docker image (it's much harder to set up tooling on your own, take this and use it!)
+* The `asciidoctor-pdf` tool for generating PDF output
+* The `asciidoctor-revealjs` tool for generating slides in RevealJs
+
+NOTE: I wanted to give a shout out to Dan Allen and the team working on AsciiDoctor. You make writing training content easier with your tools, and for that I thank you!
+
+== Building Docs and Slides
+
+To generate the slide deck, use `build-slides.sh`, and to generate the book sample, use `build-book.sh`.
+
+== Running the Slide Show
+
+[listing]
+----
+cd reveal.js
+npm install
+npm start
+----
+
+NOTE: Browse to `http://localhost:8000/slide-deck.html`
+
+== These examples and Winders
+
+If you are on Windows, consider installing WSL 2 and using Docker Engine with WSL Linux containers for a great command line experience, and install the Visual Studio Code WSL plugin. You'll get a native Linux engine, docker integration, a bash shell, and the ability to run these samples.  What's not to like?
+
+Otherwise, you probably will end up using the native Ruby installation on Windows, which takes a bit of time but _is_ possible to use with some wrestling.
+
+
+

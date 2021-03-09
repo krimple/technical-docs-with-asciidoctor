@@ -1,0 +1,123 @@
+include::asciidoc-book.settings[]
+
+= A book with sample markup
+Ken Rimple
+Chariot Solutions
+
+== Samples
+
+NOTE: Taken from our React training course lab manual as an illustration of the features of the AsciiDoc format. For information on our courses visit https://chariotsolutions.com/training.
+
+=== Text and Code Snippets 
+
+. Using your favorite JavaScript-supported IDE or editor (suggestions: Visual Studio Code,
+Sublime Text, IntelliJ IDEA/Webstorm, VIM or EMACS), open up the `words` demonstration
+project in the React projects labs folder provided to you by the instructor. You'll be using this project for the rest of the course.
+
+. Make sure your IDE supports a command-line interface to your operating system, or set up
+a command-line shell. Multiple panes are recommended as we launch different commands like servers and testing engines simultaneously.
+
+. Make sure the "Game" project dependencies are installed by executing:
++
+[{bashlisting}]
+----
+yarn install
+----
++
+In the beginning, we've pre-configured the project to mount the `Game` component in the
+file `Game.js`, located at `src/11-ajax-solution`.
++
+We did this so that you can see how the application operates once it is built. This should have been done during earlier an course lecture.
+
+. Now, change the import for the root `<Game>` component in `src/index.js` so that you can work on the first in a series of labs against this game.
++
+.`src/index.js`: the bootstrap file for our labs
+[source,listing,linenums,subs=+quotes]
+----
+import 'bootstrap/dist/css/bootstrap.css';                    <1>
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+*import Game* from './04-components-and-views-start/Game';    <2>
+
+*// import Game from './11-ajax-solution/Game';*              <3>
+
+*ReactDOM.render(<Game/>, document.getElementById('root'));*   <4>
+----
+<1> Our application will be built based on the Twitter Bootstrap CSS library
+<2> All projects in this set start with a single React component, `<Game>`. In each lab, you uncomment the proper import and comment out the one from the last project.
+<3> Remember to comment out the solution for the final lab before starting your work.
+<4> Take the HTML `div` with the ID of `root` and replace its contents with the `<Game>` component
++
+All of the files needed to work with the lab exist in `src/lab-04-components-and-views-start` and it is enabled by pointing to its root component with an import in this file.
++
+Our build tool, Webpack, can support loading CSS files as part of the target bundle. These CSS files are in-lined as
+JavaScript elements and distributed in the final target output. The `create-react-app` project starter automatically adds this loader.
+
+TIP: You may review solutions in `04-components-and-views-solution` instead if you are unable to complete the assignments. We've done this for every chapter. To run it, simply comment out another `Game` component import and uncomment the solution.
+
+=== Table
+
+.This is the table caption 
+[cols=4*,options="header"]
+[%autowidth]
+|===
+|Action
+|Affected State
+|State Host
+|Trigger Host
+
+|Cell
+|Cell in column 2, row 1
+
+|Cell
+|Cell in column 2, row 2
+|===
+
+=== Subscribing to the Observable for the Http call
+
+[source,javascript,linenums,subs=+macros]
+----
+constructor(service: HttpDemoService) {
+  pass:quotes[*service.getData()*]
+         .subscribe(
+           (results) => { this.data = results },
+           (error) => { alert(pass:[`Error loading, ${error}`]); },
+           () => { console.log('call complete'));
+}
+----
+
+
+=== DIAGRAMS
+
+.blockdiag
+[blockdiag,'blockdiag-simple-example',svg]
+....
+blockdiag {
+   // Set labels to nodes.
+   A [label = "foo"];
+   B [label = "bar"];
+   // And set text-color
+   C [label = "baz"];
+
+   // Set labels to edges. (short text only)
+   A -> B [label = "click", textcolor="red"];
+   B -> C [label = "click"];
+   C -> A;
+}
+....
+
+.digraph
+[graphviz,'gvdiag-simple-example',svg,width=600]
+....
+digraph G {
+rankdir="LR"
+A [label="Top Node"]
+B [label="Middle C"]
+C
+A -> {B C}
+B -> {E F G}
+}
+....
+
+

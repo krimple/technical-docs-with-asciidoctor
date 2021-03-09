@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg height='44pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 664.17 44.00' width='664pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 40)'>
+<title>G</title>
+<polygon fill='white' points='-4,4 -4,-40 660.17,-40 660.17,4 -4,4' stroke='transparent'/>
+
+<g class='node' id='node1'>
+<title>A</title>
+<ellipse cx='70.19' cy='-18' fill='none' rx='70.39' ry='18' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='70.19' y='-14.3'>[1, 2, 3, 4, 5]</text>
+</g>
+
+<g class='node' id='node2'>
+<title>B</title>
+<ellipse cx='362.28' cy='-18' fill='none' rx='81.79' ry='18' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='362.28' y='-14.3'>[1, 4, 9, 16, 25]</text>
+</g>
+
+<g class='edge' id='edge1'>
+<title>A&#45;&gt;B</title>
+<path d='M140.68,-18C179.47,-18 228.26,-18 270.09,-18' fill='none' stroke='black'/>
+<polygon fill='black' points='270.28,-21.5 280.28,-18 270.28,-14.5 270.28,-21.5' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='210.39' y='-21.8'>map operation</text>
+</g>
+
+<g class='node' id='node3'>
+<title>C</title>
+<ellipse cx='629.17' cy='-18' fill='none' rx='27' ry='18' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='629.17' y='-14.3'>58</text>
+</g>
+
+<g class='edge' id='edge2'>
+<title>B&#45;&gt;C</title>
+<path d='M444.2,-18C493.57,-18 554.26,-18 592.09,-18' fill='none' stroke='black'/>
+<polygon fill='black' points='592.12,-21.5 602.12,-18 592.12,-14.5 592.12,-21.5' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='523.17' y='-21.8'>reduce operation</text>
+</g>
+</g>
+</svg>

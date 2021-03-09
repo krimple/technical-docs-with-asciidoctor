@@ -1,0 +1,102 @@
+include::asciidoc-slides.settings[]
+
+== Agenda
+
+* Recap of ECMAScript 5 Baseline JS Syntax
+* ECMASCript 2015+
+* Typescript
+
+=== Javascript recap
+
+(ECMAScript 5) JavaScript core features:
+
+* A functional, object-based language
+* Objects contain dynamically typed properties (bags of data)
+* Functions take parameters, execute code and return values
+* A context variable, `this`, is defined referring to the current object
+* Variables are scoped at the function level with `var`
+* Unscoped variables live globally as variables on `window`
+
+[%center]
+== Functions
+
+=== What are functions?
+
+* Functions declare callable code blocks
+** Can return objects, values or functions
+** Can accept objects, values or functions as arguments
+** May define their own local variables
+
+[{javascriptlisting}]
+----
+function add(a, b) {
+    return a + b;
+}
+
+var result = add(3, 5);
+----
+
+=== Functions have their own type
+
+[{javascriptlisting}]
+----
+var adder = function(a, b) {
+  return a + b;
+};
+
+typeof adder
+> "function"
+----
+
+* Function is similar to object - it can have properties and even other
+methods attached to it. But for now, we'll focus on the fact that it
+is a named block of code with inputs and outputs
+
+[%center]
+== Higher-order functions
+
+=== Example higher-order function - reduce
+
+[{javascriptlisting}]
+----
+let items = [1, 2, 3, 4, 5];
+itemspass:quotes[*.reduce((item, result) => result += item, 0);*]
+----
+
+* Applies calculation to each item
+* Optional second parameter - the initial value
+* Reduce operation visualized:
++
+[graphviz,'./images/02-es2015-16/reduceoperation',{graphviz}]
+....
+digraph G {
+rankdir="LR"
+A [label="[1, 2, 3, 4, 5]"]
+B [label="15"]
+A -> B [label="reduce operation"]
+}
+....
+
+=== Higher-order functions can be chained
+
+[{javascriptlisting}]
+----
+let items = [1, 2, 3, 4, 5];
+itemspass:quotes[*.map((item) => item * item)*]
+     pass:quotes[*.reduce((item, result) => result += item, 0);*]
+// 55
+----
+
+* Combined operation visualized:
++
+[graphviz,'./images/02-es2015-16/combinator-operation',{graphviz}]
+....
+digraph G {
+rankdir="LR"
+A [label="[1, 2, 3, 4, 5]"]
+B [label="[1, 4, 9, 16, 25]"]
+C [label="58"]
+A -> B [label="map operation"]
+B -> C [label="reduce operation"]
+}
+....

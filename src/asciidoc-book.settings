@@ -1,0 +1,32 @@
+:stylesdir: .
+:coderay-css-file: src/coderay.css
+:coderay-linenums-mode: inline
+:source-highlighter: none
+:icons: font
+:imagesdir: ../pdf
+:hash: #
+:backtick: `
+:react-comment-start: { /*
+:react-comment-end: /* }
+:quotes-and-attributes: +quotes,+attributes
+:two-underbars: __
+
+
+// Current bugs and lack of features in asciidoctor-pdf
+// keep these from being anything but semantic differences
+// but I'd rather create settings per file type for the day
+// when highlighighting libraries work with PDF
+
+:listing: source,listing,subs="+quotes,+macros"
+:htmllisting: source,listing,subs="+quotes,+macros"
+:javascriptlisting: source,listing,subs="+quotes,+macros"
+:jsxlisting: source,listing,subs="+quotes,+macros"
+:simplejsxlisting: source,listing,subs="+macros"
+:bashlisting: source,listing,subs="+quotes,+macros"
+:csslisting: source,listing,subs="+quotes,+macros"
+:literallisting: source,listing
+
+// added graphics options
+:graphviz: svg,width=1100
+:svg: svg,width=1100
+:png: png,width=1100

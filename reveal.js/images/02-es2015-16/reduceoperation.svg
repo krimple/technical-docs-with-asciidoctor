@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg height='44pt' preserveAspectRatio='xMidYMid meet' viewBox='0.00 0.00 360.39 44.00' width='360pt' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'>
+<g class='graph' id='graph0' transform='scale(1 1) rotate(0) translate(4 40)'>
+<title>G</title>
+<polygon fill='white' points='-4,4 -4,-40 356.39,-40 356.39,4 -4,4' stroke='transparent'/>
+
+<g class='node' id='node1'>
+<title>A</title>
+<ellipse cx='70.19' cy='-18' fill='none' rx='70.39' ry='18' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='70.19' y='-14.3'>[1, 2, 3, 4, 5]</text>
+</g>
+
+<g class='node' id='node2'>
+<title>B</title>
+<ellipse cx='325.39' cy='-18' fill='none' rx='27' ry='18' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='325.39' y='-14.3'>15</text>
+</g>
+
+<g class='edge' id='edge1'>
+<title>A&#45;&gt;B</title>
+<path d='M140.71,-18C188.35,-18 249.63,-18 287.97,-18' fill='none' stroke='black'/>
+<polygon fill='black' points='288.14,-21.5 298.14,-18 288.14,-14.5 288.14,-21.5' stroke='black'/>
+<text font-family='Times,serif' font-size='14.00' text-anchor='middle' x='219.39' y='-21.8'>reduce operation</text>
+</g>
+</g>
+</svg>
