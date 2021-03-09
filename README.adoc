@@ -16,6 +16,15 @@ NOTE: I wanted to give a shout out to Dan Allen and the team working on AsciiDoc
 
 To generate the slide deck, use `build-slides.sh`, and to generate the book sample, use `build-book.sh`.
 
+== General project resources
+
+* The Asciidoc language https://asciidoctor.org/docs/
+* AsciiDoctor PDF https://asciidoctor.org/docs/asciidoctor-pdf/
+* AsciiDoctor RevealJS https://docs.asciidoctor.org/reveal.js-converter/latest/
+
+WARNING: Asciidoctor's RevealJs generator is touchy when it comes to the version of Reveal. Specifically it currently (as of March 2021)
+does *not* support Reveal 4.0 and above. See the details here: https://docs.asciidoctor.org/reveal.js-converter/latest/setup/compatibility-matrix/.
+
 == Running the Slide Show
 
 [listing]
@@ -27,7 +36,7 @@ npm start
 
 NOTE: Browse to `http://localhost:8000/slide-deck.html`
 
-== These examples and Winders
+== These examples and Winders 10
 
 If you are on Windows, consider installing WSL 2 and using Docker Engine with WSL Linux containers for a great command line experience, and install the Visual Studio Code WSL plugin. You'll get a native Linux engine, docker integration, a bash shell, and the ability to run these samples.  What's not to like?
 
